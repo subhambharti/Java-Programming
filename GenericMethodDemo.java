@@ -1,15 +1,20 @@
-// 97.	Write a program to implement a generic method.
-
-public class GenericMethodDemo {
+class GenericMethodDemo {
+    // Generic method
     public static <T> void printArray(T[] array) {
-        for (T element : array)
-            System.out.println(element);
+        for (T element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        Integer[] nums = {1, 2, 3};
-        String[] words = {"A", "B", "C"};
-        printArray(nums);
-        printArray(words);
+        Integer[] intArray = {1, 2, 3, 4, 5};
+        String[] strArray = {"Hello", "Generics", "Java"};
+
+        System.out.print("Integer Array: ");
+        printArray(intArray);  // Calling generic method
+
+        System.out.print("String Array: ");
+        printArray(strArray);  // Calling generic method
     }
 }
